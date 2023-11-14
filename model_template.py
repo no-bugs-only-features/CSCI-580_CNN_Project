@@ -25,7 +25,7 @@ cnn = tf.keras.models.Sequential()
 # "Conv2D" means this is a convolutional layer
 # 10 is the number of filters, (4,4) is the size of each filter
 # Change layer type, activation, and filter number/size as you like
-cnn.add(tf.keras.layers.Conv2D(10, (4,4), activation="relu", input_shape=(28, 28, 1)))
+cnn.add(tf.keras.layers.Conv2D(10, (4, 4), activation="relu", input_shape=(28, 28, 1)))
 
 # Add hidden layers
 # Example: cnn.add(tf.keras.layers.MaxPooling2D((2, 2)))

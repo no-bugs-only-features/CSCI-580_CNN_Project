@@ -17,7 +17,7 @@ We will implement this project in Python using the TensorFlow library’s implem
 ### Build and Run the Container
 ```
 docker build -t cnn-project .
-docker run -it cnn-project
+docker run -v "$(pwd)":/cnn_project -it cnn-project
 ```
 
 Now you're in the Docker container!<br>

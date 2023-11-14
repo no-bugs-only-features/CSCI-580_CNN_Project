@@ -1,3 +1,5 @@
 tensorflow
 numpy
 flake8
+opencv-python
+matplotlib

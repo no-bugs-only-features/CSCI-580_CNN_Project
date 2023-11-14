@@ -41,9 +41,9 @@ cnn.add(tf.keras.layers.Dense(10, activation="softmax"))
 #     is often used for multi-class classification problems like ours)
 # metrics should stay consistent across all our models, whatever we choose
 cnn.compile(
-  optimizer="sgd", 
-  loss="sparse_categorical_crossentropy", 
-  metrics=["accuracy"]
+    optimizer="sgd", 
+    loss="sparse_categorical_crossentropy", 
+    metrics=["accuracy"]
 )
 
 # Train and save the CNN model

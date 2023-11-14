@@ -21,18 +21,25 @@ training_pixels = tf.keras.utils.normalize(training_pixels, axis=1)
 # Create the CNN
 cnn = tf.keras.models.Sequential()
 
-# Add the input layer (converts the pixel matrix into an array)
-cnn.add(tf.keras.layers.Flatten(input_shape=(28, 28)))
+# Add the input layer
+# "Conv2D" means this is a convolutional layer
+# 10 is the number of filters, (4,4) is the size of each filter
+# Change layer type, activation, and filter number/size as you like
+cnn.add(tf.keras.layers.Conv2D(10, (4,4), activation="relu", input_shape=(28, 28, 1)))
 
 # Add hidden layers
-# cnn.add(tf.keras.layers.LAYER_TYPE(NUM_NODES, activation="ACTIVATION_TYPE"))
+# Example: cnn.add(tf.keras.layers.MaxPooling2D((2, 2)))
+# Example: cnn.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))
 
 # Add the output layer
-# Dense layer type means a fully connected layer (can be changed)
+# Dense layer type means a fully connected layer (this is optional, but if
+#    a dense layer is used, there must be a layer to flatten the cnn -- which
+#    turns the matrix into an array)
 # Must be 10 nodes in the layer (one for each possible digit)
 # "softmax" activation makes it so the total from all output nodes adds up to 1 
 #    (meaning the output value for a digit's node is the probability that
 #    the input image depicts that digit)
+cnn.add(tf.keras.layers.Flatten())
 cnn.add(tf.keras.layers.Dense(10, activation="softmax"))
 
 # Compile the CNN

@@ -13,7 +13,8 @@ We intend to use a convolutional neural network to solve this problem.
 ## Tools:
 We will implement this project in Python using the TensorFlow library’s implementation of a CNN. 
 
-## Run the Docker Environment:
+## Using Docker:
+### Build and Run the Container
 ```
 docker build -t cnn-project .
 docker run -it cnn-project
@@ -23,6 +24,12 @@ Now you're in the Docker container!<br>
 Run "python test.py" to verify everything is working.<br>
 Type "exit" to leave container.
 
+### Compile and Test a CNN Model
+```
+python your_model_file.py
+python test_cnn.py your_cnn_model.model
+```
+
 ## Group Members:
 - Eric Galvan
 - Kendal Hasek
@@ -31,4 +38,4 @@ Type "exit" to leave container.
 - Dylan Wright
 
 ## Citations:
-- 
+This project was inspired by a video tutorial entitled **Neural Network Python Project - Handwritten Digit Recognition**, created by **NeuralNine**. You can watch the video [here](https://www.youtube.com/watch?v=bte8Er0QhDg).

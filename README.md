@@ -22,7 +22,10 @@ docker run -v "$(pwd)":/cnn_project -it cnn-project
 
 Now you're in the Docker container!<br>
 Run "python test.py" to verify everything is working.<br>
-Type "exit" to leave container.
+Type "exit" to leave container.<br>
+
+You can also use wsl and docker desktop to get the container going.<br>
+Type "code ." to open vscode in the current directory.<br>
 
 ### Compile and Test a CNN Model
 ```

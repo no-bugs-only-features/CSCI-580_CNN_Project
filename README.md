@@ -32,6 +32,11 @@ Type "code ." to open vscode in the current directory.<br>
 python your_model_file.py
 python test_cnn.py your_cnn_model.model
 ```
+## docker display
+please follow link for instructions<br>
+```
+https://drive.google.com/file/d/1dLsgAz2mUjaHWR84iS1ZfE2NyiX7jqlc/view?usp=sharing
+```
 
 ## Group Members:
 - Eric Galvan

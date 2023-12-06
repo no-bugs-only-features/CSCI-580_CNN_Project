@@ -63,7 +63,7 @@ model.summary()
 from keras.callbacks import CSVLogger
 logger = CSVLogger("VGG-16.csv", append=False)
 
-model.fit(x_train, y_train, batch_size=64, epochs=40, validation_split=0.03, callbacks=[logger])
+model.fit(x_train, y_train, batch_size=16, epochs=40, validation_split=0.03, callbacks=[logger])
 
 model.save("VGG-16.model")
 

@@ -57,15 +57,15 @@ model.add(layers.Dropout(0.5))
 
 model.add(layers.Dense(10, activation="softmax"))
 
-model.compile(optimizer='adam', loss=losses.sparse_categorical_crossentropy, metrics=['accuracy'])
+model.compile(optimizer="adam", loss=losses.sparse_categorical_crossentropy, metrics=["accuracy"])
 model.summary()
 
 from keras.callbacks import CSVLogger
-logger = CSVLogger("LeNet-5.csv")
+logger = CSVLogger("VGG-16.csv", append=False)
 
 model.fit(x_train, y_train, batch_size=64, epochs=40, validation_split=0.03, callbacks=[logger])
 
-model.save('VGG-16.model')
+model.save("VGG-16.model")
 
 # model = models.load_model('LeNet-5.model')
 # model.summary()
